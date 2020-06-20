@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 
 const BoogieList = ({ boogie, handleDeleteBoogie }) => {
     return (
@@ -25,13 +27,11 @@ const BoogieList = ({ boogie, handleDeleteBoogie }) => {
                 >
                     Edit Boogie
                     </Link>
-                <button>
-                    <Link
-                        className='btn btn-xs btn-danger margin-left-10'
-                        onClick={() => handleDeleteBoogie(boogie._id)}
-                    >
-                        Edit Boogie
-                    </Link>
+                <button
+                    className='btn btn-xs btn-danger margin-left-10'
+                    onClick={() => handleDeleteBoogie(boogie._id)}
+                >
+                    Delete Boogie
                 </button>
             </div>
         </div>
