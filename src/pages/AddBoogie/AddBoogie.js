@@ -2,6 +2,7 @@ import React from 'react';
 
 class AddBoogie extends React.Component {
     state = {
+        invalidForm: true,
         formData: {
             name: '',
             brand: '',
@@ -32,8 +33,11 @@ class AddBoogie extends React.Component {
                 <form ref={this.formRef} autoComplete='off' onSubmit={this.handleSubmit}>
                     <div>
                         <label>
-                            Board Name (required)
+                            Board Name
                         </label>
+                        <div>
+                            (required)
+                            </div>
                         <input
                             className='form-control'
                             name='name'
@@ -43,7 +47,10 @@ class AddBoogie extends React.Component {
                         />
                     </div>
                     <div className='form-group'>
-                        <label>Board Brand(required)</label>
+                        <label>Board Brand</label>
+                        <div>
+                            (required)
+                        </div>
                         <input
                             className='form-control'
                             name='brand'
@@ -51,13 +58,41 @@ class AddBoogie extends React.Component {
                             onChange={this.handleChange}
                             required
                         />
-                        <div class>
-
+                    </div>
+                    <div>
+                        <label>Board Type</label>
+                        <div>
+                            (required)
                         </div>
+                        <input
+                            className='form-control'
+                            name='type'
+                            value={this.state.formData.type}
+                            onChange={this.handleChange}
+                            required
+                        />
+                    </div>
+                    <div>
+                        <label>Board $$$</label>
+                        <div>
+                            (required)
+                        </div>
+                        <input
+                            className='form-control'
+                            name='price'
+                            value={this.state.formData.price}
+                            onChange={this.handleChange}
+                            required
+                        />
+                        <button
+                            type='submit'
+                            className='btn'
+                            disabled={this.state.invalidForm}
+                        >
+                            Add Board
+                            </button>
                     </div>
                 </form>
-
-
             </>
         )
     }

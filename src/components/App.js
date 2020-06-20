@@ -1,7 +1,5 @@
-import React, { Component } from 'react';
-// import { Route, NavLink } from 'react-router-dom';
+import React from 'react';
 import { BrowserRouter as Router, Route, NavLink, Switch } from 'react-router-dom';
-// import { Route, Switch, NavLink } from "react-router-dom";
 import * as boogieAPI from '../pages/services/boogieAPI';
 import BoogieList from './BoogieList/BoogieList';
 import AddBoogie from '../pages/AddBoogie/AddBoogie';
