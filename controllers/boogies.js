@@ -18,12 +18,13 @@ async function show(req, res) {
     res.status(200).json(boogie);
 }
 async function create(req, res) {
+    console.log('hitting', req.body)
     const boogie = await Boogie.create(req.body);
     res.status('201').json(boogie);
 }
 async function deleteBoogie(req, res) {
     const deletedBoogie = await Boogie.findByIdAndDelete(req.params.id);
-    res.status(200).json(deleteBoogie);
+    res.status(200).json(deletedBoogie);
 }
 async function update(req, res) {
     const updateBoogie = Boogie.findByIdAndUpdate(req.params.id, req.body, { new: true });
