@@ -1,6 +1,6 @@
-let express = require('express');
-let router = express.Router();
-let boogiesCtrl = require('../../controllers/boogies');
+const express = require('express');
+const router = express.Router();
+const boogiesCtrl = require('../../controllers/boogies');
 
 router.get('/', boogiesCtrl.index);
 router.get('/:id', boogiesCtrl.show);

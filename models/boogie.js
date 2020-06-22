@@ -5,7 +5,7 @@ let boogieSchema = new Schema({
     name: { type: String, required: true },
     brand: { type: String, default: 'Soft Top' },
     type: { type: String, required: true },
-    price: { type: Number, required: true },
+    price: { type: Number, default: 0 },
 }, {
     timestamps: true
 });
