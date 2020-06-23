@@ -1,7 +1,8 @@
 const express = require('express');
 const path = require('path');
-const logger = require('morgan');
 const favicon = require('serve-favicon');
+const logger = require('morgan');
+
 
 require('dotenv').config();
 require('./config/database');
@@ -18,6 +19,7 @@ app.use(express.static(path.join(__dirname, 'build')));
 
 //api routes go before "catch all" route 
 // app.use('/api/boogies', boogiesRouter);
+// app.use('/api', require('./routes/api/boogies'));
 
 app.get('/*', function (req, res) {
     res.sendFile(path.join(__dirname, 'build', 'index.html'));

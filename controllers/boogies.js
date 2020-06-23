@@ -19,10 +19,18 @@ async function show(req, res) {
 }
 
 async function create(req, res) {
-    const boogie = await Boogie.create(req.body);
-    console.log('hitting', boogie)
-    res.status(201).json(boogie);
+    try {
+        const boogie = await Boogie.create(req.body);
+        res.json(boogie);
+    } catch (err) {
+        res.status(400).json(err)
+    }
 }
+// async function create(req, res) {
+//     const boogie = await Boogie.create(req.body);
+//     console.log('hitting', boogie)
+//     res.status(201).json(boogie);
+// }
 
 async function deleteBoogie(req, res) {
     const deletedBoogie = await Boogie.findByIdAndDelete(req.params.id);
