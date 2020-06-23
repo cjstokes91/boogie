@@ -4,7 +4,7 @@ module.exports = {
     index,
     show,
     create,
-    deleteBoogie,
+    delete: deleteBoogie,
     update
 };
 
@@ -27,7 +27,7 @@ async function create(req, res) {
     }
 }
 // async function create(req, res) {
-//     const boogie = await Boogie.create(req.body);
+//     const boogie = await Boogie.create(req.body); 
 //     console.log('hitting', boogie)
 //     res.status(201).json(boogie);
 // }
