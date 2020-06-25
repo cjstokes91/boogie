@@ -6,8 +6,8 @@ class AddBoogie extends React.Component {
         formData: {
             name: '',
             brand: '',
-            type: '',
-            price: ''
+            type: 'Soft Top',
+            price: 0
         }
     }
 
@@ -56,7 +56,7 @@ class AddBoogie extends React.Component {
                             name='brand'
                             value={this.state.formData.brand}
                             onChange={this.handleChange}
-                            required
+                        // required
                         />
                     </div>
                     <div>
@@ -69,7 +69,7 @@ class AddBoogie extends React.Component {
                             name='type'
                             value={this.state.formData.type}
                             onChange={this.handleChange}
-                            required
+                        // required
                         />
                     </div>
                     <div>
@@ -82,7 +82,7 @@ class AddBoogie extends React.Component {
                             name='price'
                             value={this.state.formData.price}
                             onChange={this.handleChange}
-                            required
+                        // required
                         />
                         <button
                             type='submit'

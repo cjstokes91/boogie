@@ -25,12 +25,8 @@ async function create(req, res) {
     } catch (err) {
         res.status(400).json(err)
     }
+    console.log('controller', req.body)
 }
-// async function create(req, res) {
-//     const boogie = await Boogie.create(req.body); 
-//     console.log('hitting', boogie)
-//     res.status(201).json(boogie);
-// }
 
 async function deleteBoogie(req, res) {
     const deletedBoogie = await Boogie.findByIdAndDelete(req.params.id);
