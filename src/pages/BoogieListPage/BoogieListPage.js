@@ -14,7 +14,7 @@ const BoogieListPage = (props) => {
                         handleDeleteBoogie={props.handleDeleteBoogie}
                         key={boogie._id}
                     />
-                )};
+                )}
             </div>
         </>
     );

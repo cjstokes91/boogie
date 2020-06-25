@@ -13,6 +13,11 @@ class App extends React.Component {
     boogies: []
   };
 
+  async componentDidMount() {
+    const boogies = await boogieAPI.getAll();
+    this.setState({ boogies });
+  }
+
   handleAddBoogie = async newBoogieData => {
     const newBoogie = await boogieAPI.create(newBoogieData);
     this.setState(state => ({
@@ -39,10 +44,6 @@ class App extends React.Component {
     );
   }
 
-  async componentDidMount() {
-    const boogies = await boogieAPI.getAll();
-    this.setState({ boogies });
-  }
 
   render() {
     return (
@@ -84,7 +85,7 @@ class App extends React.Component {
         </main>
       </div>
     );
-  }
-}
+  };
+};
 
 export default App;
