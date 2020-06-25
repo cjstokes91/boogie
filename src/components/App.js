@@ -21,11 +21,12 @@ class App extends React.Component {
       () => this.props.history.push('/'));
   }
 
+
   handleDeleteBoogie = async id => {
     await boogieAPI.deleteOne(id);
     this.setState(state => ({
       boogies: state.boogies.filter(boogie => boogie._id !== id)
-    }), () => this.props.hisrory.push('/'));
+    }), () => this.props.history.push('/'));
   }
 
   handleUpdateBoogie = async updatedBoogieData => {
@@ -74,6 +75,7 @@ class App extends React.Component {
               <Route exact path='/edit' render={({ location }) =>
                 <EditBoogie
                   handleUpdateBoogie={this.handleUpdateBoogie}
+                  handleDeleteBoogie={this.handleDeleteBoogie}
                   location={location}
                 />
               } />

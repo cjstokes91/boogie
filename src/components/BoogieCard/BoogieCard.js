@@ -5,7 +5,7 @@ function BoogieCard({ boogie }) {
     return (
         <div className='panel panel-default'>
             <div className='panel-heading' >
-                {/* <h3 className='panel-title'>{boogie.name}</h3> */}
+                <h3 className='panel-title'>{boogie.name}</h3>
             </div>
             <div className='panel-body'>
                 <dl>
