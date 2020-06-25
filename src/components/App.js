@@ -13,6 +13,7 @@ class App extends React.Component {
     boogies: []
   };
 
+
   async componentDidMount() {
     const boogies = await boogieAPI.getAll();
     this.setState({ boogies });
