@@ -2,11 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 
-const BoogieList = ({ boogie, handleDeleteBoogie }) => {
+// const BoogieList = ({ boogie, handleDeleteBoogie }) => {
+function BoogieList({ boogie, handleDeleteBoogie }) {
     return (
         <div className='panel panel-default'>
             <div className='panel-heading'>
-                {/* <h3 className='panel-title'>{boogie.name}</h3> */}
+                <h3 className='panel-title'>{boogie.name}</h3>
             </div>
             <div className='panel-footer BoogieListItem-action-panel'>
                 <Link
