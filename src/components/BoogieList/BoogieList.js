@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 
-function BoogieList({ boogie, handleDeleteUpdate }) {
+function BoogieList({ boogie, handleDeleteBoogie }) {
     console.log('hitting', boogie)
     return (
         <div className='panel panel-default'>
@@ -30,7 +30,7 @@ function BoogieList({ boogie, handleDeleteUpdate }) {
                     </Link>
                 <button
                     className='btn btn-xs btn-danger margin-left-10'
-                    onClick={() => handleDeleteUpdate(boogie._id)}
+                    onClick={() => handleDeleteBoogie(boogie._id)}
                 >
                     Delete Boogie
                 </button>
