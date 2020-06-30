@@ -25,7 +25,7 @@ async function create(req, res) {
     } catch (err) {
         res.status(400).json(err)
     }
-    console.log('controller', req.body)
+    console.log('hitting create', req.body)
 }
 
 async function deleteBoogie(req, res) {
@@ -36,4 +36,5 @@ async function deleteBoogie(req, res) {
 async function update(req, res) {
     const updateBoogie = await Boogie.findByIdAndUpdate(req.params.id, req.body, { new: true });
     res.status(200).json(updateBoogie);
+    console.log('ctrl hitting', update)
 }

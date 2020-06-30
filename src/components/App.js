@@ -39,11 +39,12 @@ class App extends React.Component {
 
   handleUpdateBoogie = async updatedBoogieData => {
     const updatedBoogie = await boogieAPI.update(updatedBoogieData);
-    const newBoogieArray = this.state.boogies.map(boogie =>
-      boogie._id === updatedBoogie._id ? updatedBoogie : boogie);
+    // Using map to replace just the puppy that was updated
+    const newBoogieArray = this.state.boogies.map(b =>
+      b._id === updatedBoogie._id ? updatedBoogie : b);
     this.setState(
       { boogies: newBoogieArray },
-      () => this.props.hisrory.push('/')
+      () => this.props.history.push('/')
     );
   }
 
@@ -72,6 +73,8 @@ class App extends React.Component {
                 <BoogieListPage
                   boogies={this.state.boogies}
                   handleDeleteBoogie={this.handleDeleteBoogie}
+                  handleUpdateBoogie={this.handleUpdateBoogie}
+
                 />
               } />
               <Route exact path='/add' render={() =>

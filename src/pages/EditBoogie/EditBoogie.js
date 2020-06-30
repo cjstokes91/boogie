@@ -35,7 +35,7 @@ class EditBoogie extends React.Component {
                             Boogie Name
                     </label>
                         <input
-                            classForm="form-control"
+                            className="form-control"
                             name="name"
                             value={this.state.formData.name}
                             onChange={this.handleChange}
@@ -47,7 +47,7 @@ class EditBoogie extends React.Component {
                             Boogie Brand
                     </label>
                         <input
-                            classForm="form-control"
+                            className="form-control"
                             name="brand"
                             value={this.state.formData.brand}
                             onChange={this.handleChange}
@@ -59,7 +59,7 @@ class EditBoogie extends React.Component {
                             Boogie Type
                     </label>
                         <input
-                            classForm="form-control"
+                            className="form-control"
                             name="type"
                             value={this.state.formData.type}
                             onChange={this.handleChange}
@@ -71,7 +71,7 @@ class EditBoogie extends React.Component {
                             Boogie Price
                     </label>
                         <input
-                            classForm="form-control"
+                            className="form-control"
                             name="price"
                             value={this.state.formData.price}
                             onChange={this.handleChange}
@@ -82,6 +82,9 @@ class EditBoogie extends React.Component {
                         type="submit"
                         className="btn btn-xs"
                         disabled={this.state.invalidform}
+                        to='/'
+                    // onClick= {() => thi}
+
                     >
                         Save Boogie
                 </button>
