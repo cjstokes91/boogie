@@ -6,6 +6,8 @@ import BoogieListPage from '../pages/BoogieListPage/BoogieListPage';
 import AddBoogie from '../pages/AddBoogie/AddBoogie';
 import EditBoogie from '../pages/EditBoogie/EditBoogie';
 import DetailBoogie from '../pages/DetailBoogie/DetailBoogie';
+import BoogieHome from '../components/BoogieHome/BoogieHome';
+
 
 
 class App extends React.Component {
@@ -58,8 +60,14 @@ class App extends React.Component {
               <NavLink exact to='/'>Boogies LIST</NavLink>
             &nbsp;&nbsp;&nbsp;
             <NavLink exact to='/add'>ADD Boogie</NavLink>
+            &nbsp;&nbsp;&nbsp;
+              <NavLink exact to='/home'>Home</NavLink>
             </nav>
             <Switch>
+              <Route exact path='/home' render={() =>
+                <BoogieHome
+                />
+              } />
               <Route exact path='/' render={() =>
                 <BoogieListPage
                   boogies={this.state.boogies}

@@ -34,6 +34,6 @@ async function deleteBoogie(req, res) {
 }
 
 async function update(req, res) {
-    const updateBoogie = Boogie.findByIdAndUpdate(req.params.id, req.body, { new: true });
+    const updateBoogie = await Boogie.findByIdAndUpdate(req.params.id, req.body, { new: true });
     res.status(200).json(updateBoogie);
 }

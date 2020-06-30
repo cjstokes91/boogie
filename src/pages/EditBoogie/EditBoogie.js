@@ -39,7 +39,7 @@ class EditBoogie extends React.Component {
                             name="name"
                             value={this.state.formData.name}
                             onChange={this.handleChange}
-                            required
+                        // required
                         />
                     </div>
                     <div className="form-group">
@@ -51,7 +51,7 @@ class EditBoogie extends React.Component {
                             name="brand"
                             value={this.state.formData.brand}
                             onChange={this.handleChange}
-                            required
+                        // required
                         />
                     </div>
                     <div className="form-group">
@@ -63,7 +63,7 @@ class EditBoogie extends React.Component {
                             name="type"
                             value={this.state.formData.type}
                             onChange={this.handleChange}
-                            required
+                        // required
                         />
                     </div>
                     <div className="form-group">
@@ -75,7 +75,7 @@ class EditBoogie extends React.Component {
                             name="price"
                             value={this.state.formData.price}
                             onChange={this.handleChange}
-                            required
+                        // required
                         />
                     </div>
                     <button
